@@ -3,30 +3,14 @@
 namespace App\Controllers;
 
 use CodeIgniter\RESTful\ResourceController;
+use App\Models\StatusModel; 
 
 class Product extends ResourceController
 {
-    protected $session;
-
-    private $products = [
-        [
-            "id" => "623b476dc4f96", 
-            "name" => "Odol",
-            "category" => "utilities",
-            "stock" => 200,
-            "price" => 5000
-        ]
-    ];
 
     public function __construct() {
-        $this->session = \Config\Services::session();
-        $this->session->start();
-
-        if(!$this->session->get('products')) {
-            $this->session->set('products', $this->products);
-        }
+        $this->statusModel = new StatusModel();
     }
-
 
     /**
      * Return an array of resource objects, themselves in array format
@@ -35,8 +19,11 @@ class Product extends ResourceController
      */
     public function index()
     {
+        
+        $products = $this->statusModel->findAll();
+
         $payload = [
-            "products" => $this->session->get('products')
+            "story" => $products
         ];
 
         echo view('product/index', $payload);
@@ -69,20 +56,13 @@ class Product extends ResourceController
      */
     public function create()
     {
-        
-        $products = $this->session->get('products');
-
         $payload = [
-            "id" => uniqid(),
             "name" => $this->request->getPost('name'),
-            "stock" => (int) $this->request->getPost('stock'),
-            "price" => (int) $this->request->getPost('price'),
-            "category" => $this->request->getPost('category'),
+            "stock" => (int) $this->request->getPost('status'),
+            "price" => (int) $this->request->getPost('profil'),
+            
         ];
-
-        array_push($products, $payload);
-
-        $this->session->set('products', $products);
+        $this->statusModel->insert($payload);
         return redirect()->to('/product');
     }
 
@@ -93,8 +73,15 @@ class Product extends ResourceController
      */
     public function edit($id = null)
     {
-        //
+        $product = $this->statusModel->find($id);
+        
+        if (!$product) {
+            throw new \Exception("Data not found!");   
+        }
+        
+        echo view('product/edit', ["data" => $product]);
     }
+
 
     /**
      * Add or update a model resource, from "posted" properties
@@ -103,7 +90,14 @@ class Product extends ResourceController
      */
     public function update($id = null)
     {
-        //
+        $payload = [
+            "name" => $this->request->getPost('name'),
+            "status" => (int) $this->request->getPost('status'),
+            "profil" => (int) $this->request->getPost('price'),
+        ];
+
+        $this->statusModel->update($id, $payload);
+        return redirect()->to('/product');
     }
 
     /**
@@ -113,6 +107,7 @@ class Product extends ResourceController
      */
     public function delete($id = null)
     {
-        //
+        $this->statusModel->delete($id);
+        return redirect()->to('/product');
     }
 }

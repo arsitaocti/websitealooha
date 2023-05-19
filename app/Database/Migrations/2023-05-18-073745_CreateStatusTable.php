@@ -4,7 +4,7 @@ namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class CreateProductTable extends Migration
+class CreateStatusTable extends Migration
 {
     public function up()
     {
@@ -14,32 +14,27 @@ class CreateProductTable extends Migration
                 "unsigned"=> true,
                 "auto_increment"=> true,
             ],
-            "name" => [
+            "status" => [
                 "type"=> "VARCHAR",
                 "constraint" => "200",
             ],
-            "category" => [
+            "link" => [
                 "type"=> "VARCHAR",
                 "constraint" => "200",
             ],
-            "price" => [
-                "type"=> "INT",
-                "null" => true,
-                "default" => null,
+            "photo" => [
+                "type"=> "VARCHAR",
+                "constraint" => "200",
             ],
-            "stock" => [
-                "type"=> "INT",
-                "null" => true,
-                "default" => null,
-            ],
+            
         ];
         $this->forge->addKey('id', true);
         $this->forge->addField($fields);
-        $this->forge->createTable('products', true); //If NOT EXISTS create table products
+        $this->forge->createTable('story', true); //If NOT EXISTS create table products
     }
 
     public function down()
     {
-        $this->forge->dropTable('products', true); //If Exists drop table products
+        $this->forge->dropTable('story', true); //If Exists drop table products
     }
 }
