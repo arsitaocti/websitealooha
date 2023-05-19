@@ -1,12 +1,56 @@
- <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-    -->
-  </body>
-</html>
+      <!-- section footer start -->
+      <div class="section_footer">
+         <div class="container">
+            <div class="footer_section_2">
+               <div class="row">
+                  <div class="col-sm-6 col-md-6 col-lg-3">
+                     <div class="footer_logo"><img src="images/footer-logo.png"></div>
+                     <div class="dummy_text"><img src="images/map-icon.png"><span class="address_text">Address : No 40 Baria Sreet 133/2, NewYork, USA.</span></div>
+                     <div class="call_text"><img src="images/call-icon.png"><span class="address_text">Phone :  +(1234) 567 890</span></div>
+                     <div class="call_text"><img src="images/email-icon.png"><span class="address_text">Email : gift@wenro.com</span></div>
+                     <div class="input-group mb-3">
+                        <input class="email_bt" type="text" placeholder="Enter your email">
+                        <div class="input-group-append">
+                           <button class="subscribe_bt" type="Subscribe">Subscribe</button>  
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-sm-6 col-md-6 col-lg-3">
+                     <h2 class="account_text">My Account</h2>
+                     <div class="image-icon"><img src="images/bulit-icon.png"><span class="pet_text">Checkout</span></div>
+                     <div class="image-icon"><img src="images/bulit-icon.png"><span class="pet_text">My Account</span></div>
+                     <div class="image-icon"><img src="images/bulit-icon.png"><span class="pet_text">My Orders</span></div>
+                     <div class="image-icon"><img src="images/bulit-icon.png"><span class="pet_text">My Credit Slips</span></div>
+                     <div class="image-icon"><img src="images/bulit-icon.png"><span class="pet_text">My Addresses</span></div>
+                     <div class="image-icon"><img src="images/bulit-icon.png"><span class="pet_text">My Personal Info</span></div>
+                  </div>
+                  <div class="col-sm-6 col-md-6 col-lg-3">
+                     <h2 class="account_text">Information</h2>
+                     <div class="image-icon"><img src="images/bulit-icon.png"><span class="pet_text">Specials</span></div>
+                     <div class="image-icon"><img src="images/bulit-icon.png"><span class="pet_text">New Products</span></div>
+                     <div class="image-icon"><img src="images/bulit-icon.png"><span class="pet_text">Best Sellers</span></div>
+                     <div class="image-icon"><img src="images/bulit-icon.png"><span class="pet_text">Our Stores</span></div>
+                     <div class="image-icon"><img src="images/bulit-icon.png"><span class="pet_text">Contact Us</span></div>
+                     <div class="image-icon"><img src="images/bulit-icon.png"><span class="pet_text">Secure Payment</span></div>
+                  </div>
+                  <div class="col-sm-6 col-md-6 col-lg-3">
+                     <h2 class="adderess_text">Instagram</h2>
+                     <div class="footer-img">
+                        <div class="row">
+                           <div class="col-sm-6">
+                              <div class="footer-img"><img src="images/footer-img1.png" style="width: 100%;"></div>
+                              <div class="footer-img"><img src="images/footer-img2.png" style="width: 100%;"></div>
+                           </div>
+                           <div class="col-sm-6">
+                              <div class="footer-img"><img src="images/footer-img3.png" style="width: 100%;"></div>
+                              <div class="footer-img"><img src="images/footer-img4.png" style="width: 100%;"></div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      </div>
+      <!-- section footer end -->
