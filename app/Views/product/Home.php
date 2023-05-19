@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 
 namespace App\Controllers;
@@ -24,3 +25,7 @@ class Home extends BaseController
         }
     }
 }
+=======
+
+   
+>>>>>>> 499d2465ef258e68fa13ad5937916d9f7db06d21
