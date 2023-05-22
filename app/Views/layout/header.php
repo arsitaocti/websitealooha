@@ -14,7 +14,7 @@
                         <li class="active"><a href="index.html">Home</a></li>
                         <li><a href="about.html">About</a></li>
                         <li><a href="gifts.html">Our gifts</a></li>
-                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="shop.html">Story</a></li>
                         <li><a href="contact.html">Contact Us</a></li>
                         <li><a href="#"><img src="images/search-icon.png"></a></li>
                         <li><a href="#"><img src="images/user-icon.png"></a></li>

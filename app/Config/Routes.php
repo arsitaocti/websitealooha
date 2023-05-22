@@ -33,6 +33,7 @@ $routes->get('/', 'Home::index');
 $routes->resource('product');
 $routes->resource('register');
 $routes->resource('login');
+$routes->get('Hello', 'Hello::index');
 
 /*
  * --------------------------------------------------------------------

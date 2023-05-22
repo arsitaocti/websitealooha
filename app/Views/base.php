@@ -1,6 +1,6 @@
 <html>
     <head>
-        <?= $this->include('layout/head') ?>
+        <!-- <?= $this->include('layout/head') ?> -->
     </head>
     <body>
         <?= $this->include('layout/navbar') ?>

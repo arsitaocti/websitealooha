@@ -5,9 +5,9 @@
                <div class="row">
                   <div class="col-sm-6 col-md-6 col-lg-3">
                      <div class="footer_logo"><img src="images/footer-logo.png"></div>
-                     <div class="dummy_text"><img src="images/map-icon.png"><span class="address_text">Address : No 40 Baria Sreet 133/2, NewYork, USA.</span></div>
-                     <div class="call_text"><img src="images/call-icon.png"><span class="address_text">Phone :  +(1234) 567 890</span></div>
-                     <div class="call_text"><img src="images/email-icon.png"><span class="address_text">Email : gift@wenro.com</span></div>
+                     <div class="dummy_text"><img src="images/map-icon.png"><span class="address_text">Address : dimana aja hatimu senang.</span></div>
+                     <div class="call_text"><img src="images/call-icon.png"><span class="address_text">Phone :  +(1234) 234567</span></div>
+                     <div class="call_text"><img src="images/email-icon.png"><span class="address_text">Email : akucanti@gmail.aja</span></div>
                      <div class="input-group mb-3">
                         <input class="email_bt" type="text" placeholder="Enter your email">
                         <div class="input-group-append">

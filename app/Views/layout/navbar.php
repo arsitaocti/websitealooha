@@ -10,7 +10,7 @@
         <div class="collapse navbar-collapse" id="navbarTop">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item"><a class="nav-link" href="profil">Profile</a> </li>
-                <li class="nav-item"><a class="nav-link" href="/feed">Log in</a> </li>
+                <li class="nav-item"><a class="nav-link" href="hello">Log in</a> </li>
                 <li lass="nav-item"><a class="nav-link" href="/home">Home</a> </li>
             </ul>
 
