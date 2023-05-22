@@ -13,7 +13,7 @@ class Login extends ResourceController
      */
     public function index()
     {
-        //
+            echo view ('login');
     }
 
     /**

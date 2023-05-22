@@ -1,5 +1,43 @@
 <?= $this->extend('base') ?>
 <?= $this->section('content') ?>
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+  <head><script src="../assets/js/color-modes.js"></script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.111.3">
+    <title>Alooha</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/pricing/">
+
+    <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
 
       .b-example-vr {
         flex-shrink: 0;
@@ -89,7 +127,7 @@
       </a>
 
       <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
-        <a class="py-2 link-body-emphasis text-decoration-none" href="profile.php">SOOyAA</a>
+        <a class="py-2 link-body-emphasis text-decoration-none" href="profile.php">Jane Doe</a>
       </nav>
     </div>
   </header>
@@ -98,16 +136,10 @@
 </div>
 <main class="container">
   <div class="row">
-    <div class="col-lg-12">
-      <h4> Any thoughts?</h4>
-      <form clas="form">
-        <div class="mb-3">
-          <textarea class="form-control"></textarea> 
-        </div>
-        <div class="mb-3">
-          <input type="submit" class="btn btn-primary float-end" value="post" name="">
-        </div>
-      </form>
+    <div class="col-lg-12 text-center" >
+      <image src="https://pic.onlinewebfonts.com/svg/img_569204.png" width="100">
+      <h4> Jane Doe</h4>
+      <br><br>
       </div>
     </div>
   </div>
@@ -115,17 +147,17 @@
     <div class="col-lg-12">
       <p><b>Salma</b> <br>
         NANTI PRESENTASI PROJEK >,<</br>
-        <a href="like">like</a> - <a href="comment">comment</a>
+        <a href="like">like</a>
       </p>
       <hr>
       <p><b>Arsita</b> <br>
         Panik ga tuh?</br>
-      <a href="like">like</a> - <a href="comment">comment</a>
+      <a href="like">like</a> 
       </p>
       <hr>
       <p><b>Ayang</b> <br>
       semangat yaa</br>
-      <a href="like">like</a> - <a href="comment">comment</a>
+      <a href="like">like</a> 
       </p>
       <hr>
     </div>
@@ -136,4 +168,4 @@
     
   </body>
 </html>
-<?= $this->endSection() ?><!DOCTYPE html>
+<?= $this->endSection() ?>

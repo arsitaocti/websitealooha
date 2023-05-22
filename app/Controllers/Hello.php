@@ -10,4 +10,11 @@ class Hello extends BaseController
     {
         return view('login');
     }
+
+    public function home()
+    {
+        return view('product/Home');
+    }
 }
+
+

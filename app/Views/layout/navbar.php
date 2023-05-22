@@ -1,7 +1,7 @@
 <header>
     <!-- Fixed navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" href="/">Alooha</a>
+        <a class="navbar-brand">Alooha</a>
         <!-- Navbar brand yo -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTop" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -10,7 +10,7 @@
         <div class="collapse navbar-collapse" id="navbarTop">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item"><a class="nav-link" href="profil">Profile</a> </li>
-                <li class="nav-item"><a class="nav-link" href="hello">Log in</a> </li>
+                <li class="nav-item"><a class="nav-link" href="/login">Log in</a> </li>
                 <li lass="nav-item"><a class="nav-link" href="/home">Home</a> </li>
             </ul>
 

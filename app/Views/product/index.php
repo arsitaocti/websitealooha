@@ -1,48 +1,62 @@
 <?= $this->extend('base') ?>
 <?= $this->section('content') ?>
-<div class="container mt-5">
-    <div class="row mb-4">
-        <div class="col-12">
-            <h5 class="mb-4">Activity</h5>
+<div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+      <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
+              id="bd-theme"
+              type="button"
+              aria-expanded="false"
+              data-bs-toggle="dropdown"
+              aria-label="Toggle theme (auto)">
+        <svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
+        <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+            <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#sun-fill"></use></svg>
+            Light
+            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+            <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
+            Dark
+            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+            <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#circle-half"></use></svg>
+            Auto
+            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+          </button>
+        </li>
+      </ul>
+    </div>
 
-            <table class="table table-hover ">
-                <thead>
-                    <tr>
-                        <th scope="col ">ID</th>
-                        <th scope="col ">Status</th>
-                        <th scope="col ">Profil</th>
-                        <th scope="col ">Category</th>
-                        <th scope="col ">Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php $no = 0; ?>
-                    <?php foreach ($story as $item): ?>
-                    <tr>
-                        <td><?= $no += 1; ?></td>
-                        <td><?= $item['link'] ?></td>
-                        <td><?= $item['status'] ?></td>
-                        <td><?= $item['photo'] ?></td>
-                        <td>
-                        <div class="btn-group " role="group " aria-label="Basic example ">
-                                <form action="/product/<?= $item['id'] ?>" method="POST" onsubmit="return confirm(`Are you sure?`)">
-                                    <a href="/product/<?= $item['id'] ?>/edit" class="btn btn-info text-white "><i class='bx bx-pencil'></i></a>
-                                    <input type="hidden" name="_method" value="DELETE" />
-                                    <button class="btn btn-danger text-white" type="submit">
-                                        <i class='bx bx-trash'></i>
-                                    </button>
-                                </form>
-                            </div>
-                        </td>
-                    </tr>
-                    <?php endforeach ?>
-                </tbody>
-            </table>
-        </div>
-        </div class="col-12">
-              
-</div>
-</div> 
-        </div>
-                    </div>
+    
+<main class="form-signin w-100 m-auto">
+  <form>
+   
+    <h1 class="h3 mb-3 fw-normal">LOG IN</h1>
+
+    <div class="form-floating">
+      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+      <label for="floatingInput">Email address</label>
+    </div>
+    <div class="form-floating">
+      <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+      <label for="floatingPassword">Password</label>
+    </div>
+
+    <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+   
+  </form>
+</main>
+
+
+    
+  </body>
+</html>
 <?= $this->endSection() ?>
