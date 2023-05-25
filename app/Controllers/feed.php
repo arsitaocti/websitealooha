@@ -45,4 +45,8 @@ class Feed extends BaseController
 
         return redirect()->to('/feed');
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 499d2465ef258e68fa13ad5937916d9f7db06d21
