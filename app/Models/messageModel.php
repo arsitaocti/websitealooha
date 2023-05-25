@@ -4,39 +4,31 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class UserModel extends Model
+class MessageModel extends Model
 {
-    protected $DBGroup          = 'default';
-    protected $table            = 'users';
-    protected $primaryKey       = 'id';
-    protected $useAutoIncrement = true;
-    protected $insertID         = 0;
-    protected $returnType       = 'array';
-    protected $useSoftDeletes   = false;
-    protected $protectFields    = true;
-    protected $allowedFields    = ['name', 'email', 'password'];
+    protected $table = 'messages';
+    protected $primaryKey = 'id';
+    protected $allowedFields = ['sender_id', 'receiver_id', 'message', 'created_at'];
 
-    // Dates
-    protected $useTimestamps = false;
-    protected $dateFormat    = 'datetime';
-    protected $createdField  = 'created_at';
-    protected $updatedField  = 'updated_at';
-    protected $deletedField  = 'deleted_at';
+    public function getMessages($senderId, $receiverId)
+    {
+        return $this->where(function ($builder) use ($senderId, $receiverId) {
+            $builder->where('sender_id', $senderId)
+                    ->where('receiver_id', $receiverId);
+        })->orWhere(function ($builder) use ($senderId, $receiverId) {
+            $builder->where('sender_id', $receiverId)
+                    ->where('receiver_id', $senderId);
+        })->orderBy('created_at', 'ASC')->findAll();
+    }
 
-    // Validation
-    protected $validationRules      = [];
-    protected $validationMessages   = [];
-    protected $skipValidation       = false;
-    protected $cleanValidationRules = true;
+    public function saveMessage($senderId, $receiverId, $message)
+    {
+        $data = [
+            'sender_id' => $senderId,
+            'receiver_id' => $receiverId,
+            'message' => $message
+        ];
 
-    // Callbacks
-    protected $allowCallbacks = true;
-    protected $beforeInsert   = [];
-    protected $afterInsert    = [];
-    protected $beforeUpdate   = [];
-    protected $afterUpdate    = [];
-    protected $beforeFind     = [];
-    protected $afterFind      = [];
-    protected $beforeDelete   = [];
-    protected $afterDelete    = [];
+        return $this->insert($data);
+    }
 }
