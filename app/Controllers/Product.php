@@ -22,8 +22,7 @@ class Product extends ResourceController
         $products = $this->statusModel->paginate(1,'story');
 
         $payload = [
-            "story" => $products,
-//"pager" => $this->statusModel->pager 
+            "story" => $products, 
 
         ];
 
